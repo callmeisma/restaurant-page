@@ -1,27 +1,38 @@
-const contactLoad = (() => {
-    let content = document.getElementById('content');
+const contactLoad = () => {
+  let content = document.getElementById("content");
 
-    let hero = document.createElement('div');
-    hero.setAttribute('class', 'hero');
+  let hero = document.createElement("div");
+  hero.setAttribute("class", "hero-contact");
+  content.appendChild(hero);
 
-    let heroContent = document.createElement('div');
-    heroContent.setAttribute('class', 'hero-content');
+  let touch = document.createElement("div");
+  touch.setAttribute("class", "banner");
 
-    let heroTitle = document.createElement('h1');
-    heroTitle.setAttribute('class', 'hero-title');
-    heroTitle.innerHTML = 'Contact';
+  let touchContent = document.createElement("div");
+  touchContent.setAttribute("class", "touch-content");
 
-    heroContent.appendChild(heroTitle);
+  let touchTitle = document.createElement("h3");
+  touchTitle.setAttribute("class", "touch-title");
+  touchTitle.innerHTML = "Get in Touch";
 
-    let heroButton = document.createElement('button');
-    heroButton.setAttribute('class', 'hero-button');
-    heroButton.innerHTML = 'Call Now &raquo';
+  touchContent.appendChild(touchTitle);
 
-    heroContent.appendChild(heroButton);
+  let touchSubtitle = document.createElement("p");
+  touchSubtitle.setAttribute("class", "touch-text");
+  touchSubtitle.innerHTML =
+    "Quo dicit complectitur comprehensam in, denique albucius iudicabit pro";
 
-    hero.appendChild(heroContent);
+  touchContent.appendChild(touchSubtitle);
 
-    content.appendChild(hero);
-})
+  let touchButton = document.createElement("button");
+  touchButton.setAttribute("class", "button");
+  touchButton.innerHTML = "Message";
 
-export { contactLoad }
+  touchContent.appendChild(touchButton);
+
+  touch.appendChild(touchContent);
+
+  content.appendChild(touch);
+};
+
+export { contactLoad };
