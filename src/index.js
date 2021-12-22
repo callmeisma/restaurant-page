@@ -2,8 +2,7 @@ import { homeLoad } from "./home-load";
 import { menuLoad } from "./menu-load";
 import { contactLoad } from "./contact-load";
 
-// homeLoad();
-contactLoad();
+homeLoad();
 
 function clearContent() {
   if (document.getElementById("content").hasChildNodes() === true) {
